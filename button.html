@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>炫酷按钮</title>
+  <link rel="stylesheet" type="text/css" href="button.css">
+</head>
+<body>
+  <button class="button">
+    <span>点我</span>
+  </button>
+  <script type="text/javascript">
+    document.querySelector('.button').onmousemove = (e) => {
+
+      const x = e.pageX - e.target.offsetLeft
+      const y = e.pageY - e.target.offsetTop
+
+      e.target.style.setProperty('--x', `${ x }px`)
+      e.target.style.setProperty('--y', `${ y }px`)
+    }
+  </script>
+</body>
+
+
+</html>
